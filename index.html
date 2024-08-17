@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Letra do Alfabeto</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+        .card {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 320px;
+        }
+        .text-muted {
+            color: #6c757d;
+            font-size: 0.875em;
+            margin-bottom: 15px;
+        }
+        #searchForm {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        #search {
+            width: 95%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #result {
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            width: 100%;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.875em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Pesquisar Letra do Alfabeto</h2>
+            <p class="text-muted">Digite um número entre 1 e 26 para encontrar a letra correspondente no alfabeto.</p>
+            <form id="searchForm">
+                <label for="search">Número:</label>
+                <input type="number" id="search" placeholder="Digite um número de 1 a 26">
+                <button type="button" onclick="performSearch()">Pesquisar</button>
+            </form>
+            <div id="result">&nbsp;</div>
+        </div>
+    </div>
+    <footer>
+        Desenvolvido por Rodrigo
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
